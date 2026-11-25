@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="StopAlert wakes you with location-based alerts before your train or bus destination."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>StopAlert</title>
+    <script>
+      try {
+        var theme = localStorage.getItem('stopalert.theme.v1')
+        var dark =
+          theme === 'dark' ||
+          (theme !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        if (dark) document.documentElement.classList.add('dark')
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <footer style="background: #0b1220; color: #94a3b8; text-align: center; padding: 20px;">
+  <p>&copy; 2026 StopAlert. All Rights Reserved.</p>
+  <p>Designed &amp; Developed by <strong style="color: rgb(213, 125, 125);">Aviston Lawrence Dias</strong></p>
+</footer>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
